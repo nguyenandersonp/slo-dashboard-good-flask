@@ -1,0 +1,684 @@
+<!--begin::Sidebar-->
+<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar"
+	data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px"
+	data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+	<!--begin::Logo-->
+	<div class="app-sidebar-logo d-none d-lg-flex flex-stack flex-shrink-0 px-8" id="kt_app_sidebar_logo">
+		<!--begin::Logo image-->
+		<a href="/">
+			{% if getHtmlAttribute('body', 'data-kt-app-layout') == 'dark-sidebar' %}
+			<img alt="Logo" src="{{ asset('media/logos/cg-logo-network-technologies-dark-mode.png') }}"
+				class="h-25px app-sidebar-logo-default" />
+			{% elif getHtmlAttribute('body', 'data-kt-app-layout') == 'light-sidebar' %}
+			<img alt="Logo" src="{{ asset('media/logos/cg-logo.png') }}"
+				class="theme-light-show h-25px app-sidebar-logo-default" />
+			<img alt="Logo" src="{{ asset('media/logos/cg-logo-network-technologies-dark-mode.png') }}"
+				class="theme-dark-show h-25px app-sidebar-logo-default" />
+			{% endif %}
+		</a>
+		<!--end::Logo image-->
+	</div>
+	<!--end::Logo-->
+	<!--begin::Sidebar menu-->
+	<div class="app-sidebar-menu hover-scroll-y my-5 my-lg-5 mx-3" id="kt_app_sidebar_menu_wrapper"
+		data-kt-scroll="true" data-kt-scroll-height="auto"
+		data-kt-scroll-dependencies="#kt_app_sidebar_toolbar, #kt_app_sidebar_footer" data-kt-scroll-offset="0">
+		<!--begin::Menu-->
+		<div class="menu menu-column menu-sub-indention menu-active-bg fw-semibold" id="#kt_sidebar_menu"
+			data-kt-menu="true">
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="#">
+					<span class="menu-icon">{{ getIcon('badge', 'fs-2') }}</span>
+					<span class="menu-title">Confluence</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">{{ getIcon('design', 'fs-2') }}</span>
+					<span class="menu-title">Utilities</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+					<!--begin:Menu item-->
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<!--begin:Menu link-->
+						<span class="menu-link">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Modals</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<!--end:Menu link-->
+						<!--begin:Menu sub-->
+						<div class="menu-sub menu-sub-accordion">
+							<!--begin:Menu item-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<!--begin:Menu link-->
+								<span class="menu-link">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">General</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<!--end:Menu link-->
+								<!--begin:Menu sub-->
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Invite Friends</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">View Users</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Select Users</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Upgrade Plan</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Share &amp; Earn</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+								</div>
+								<!--end:Menu sub-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<!--begin:Menu link-->
+								<span class="menu-link">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Forms</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<!--end:Menu link-->
+								<!--begin:Menu sub-->
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">New Target</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">New Card</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">New Address</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Create API Key</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Bidding</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+								</div>
+								<!--end:Menu sub-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<!--begin:Menu link-->
+								<span class="menu-link">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Wizards</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<!--end:Menu link-->
+								<!--begin:Menu sub-->
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Create App</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Create Campaign</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Create Business Acc</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Create Project</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Top Up Wallet</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Offer a Deal</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Two Factor Auth</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+								</div>
+								<!--end:Menu sub-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<!--begin:Menu link-->
+								<span class="menu-link">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Search</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<!--end:Menu link-->
+								<!--begin:Menu sub-->
+								<div class="menu-sub menu-sub-accordion menu-active-bg">
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Users</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+									<!--begin:Menu item-->
+									<div class="menu-item">
+										<!--begin:Menu link-->
+										<a class="menu-link" href="#">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Select Location</span>
+										</a>
+										<!--end:Menu link-->
+									</div>
+									<!--end:Menu item-->
+								</div>
+								<!--end:Menu sub-->
+							</div>
+							<!--end:Menu item-->
+						</div>
+						<!--end:Menu sub-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<!--begin:Menu link-->
+						<span class="menu-link">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Search</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<!--end:Menu link-->
+						<!--begin:Menu sub-->
+						<div class="menu-sub menu-sub-accordion">
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Horizontal</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Vertical</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Users</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Location</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+						</div>
+						<!--end:Menu sub-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<!--begin:Menu link-->
+						<span class="menu-link">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Wizards</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<!--end:Menu link-->
+						<!--begin:Menu sub-->
+						<div class="menu-sub menu-sub-accordion">
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Horizontal</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Vertical</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Two Factor Auth</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Create App</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Create Campaign</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Create Account</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Create Project</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Top Up Wallet</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="#">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Offer a Deal</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+						</div>
+						<!--end:Menu sub-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Apps</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="#">
+					<span class="menu-icon">{{ getIcon('rocket', 'fs-2') }}</span>
+					<span class="menu-title">LogicMonitor</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="#">
+					<span class="menu-icon">{{ getIcon('file-sheet', 'fs-2') }}</span>
+					<span class="menu-title">Splunk</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="#">
+					<span class="menu-icon">{{ getIcon('calendar-8', 'fs-2') }}</span>
+					<span class="menu-title">ServiceNow</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Help</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="https://preview.keenthemes.com/flask/good/docs">
+					<span class="menu-icon">{{ getIcon('rocket', 'fs-2') }}</span>
+					<span class="menu-title">Components</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="https://preview.keenthemes.com/flask/good/docs">
+					<span class="menu-icon">{{ getIcon('abstract-26', 'fs-2') }}</span>
+					<span class="menu-title">Documentation</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="https://preview.keenthemes.com/flask/good/docs/getting-started/changelog">
+					<span class="menu-icon">{{ getIcon('code', 'fs-2') }}</span>
+					<span class="menu-title">Changelog</span>
+				</a>
+				<!--end:Menu link-->
+			</div>
+			<!--end:Menu item-->
+		</div>
+		<!--end::Menu-->
+	</div>
+	<!--end::Sidebar menu-->
+	<!--begin::User-->
+	<div class="app-sidebar-user d-flex flex-stack py-5 px-8">
+		<!--begin::User avatar-->
+		<div class="d-flex me-5">
+			<!--begin::Menu wrapper-->
+			<div class="me-5">
+				<!--begin::Symbol-->
+				<div class="symbol symbol-40px cursor-pointer" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+					data-kt-menu-placement="bottom-start" data-kt-menu-overflow="true">
+					<img src="{{ asset('media/avatars/andn.png') }}" alt="" />
+				</div>
+				<!--end::Symbol-->
+				
+			</div>
+			<!--end::Menu wrapper-->
+			<!--begin::Info-->
+			<div class="me-2">
+				<!--begin::Username-->
+				<a href="#" class="app-sidebar-username text-gray-800 text-hover-primary fs-6 fw-semibold lh-0">Anderson Nguyen</a>
+				<!--end::Username-->
+				<!--begin::Description-->
+				<span class="app-sidebar-deckription text-gray-400 fw-semibold d-block fs-8">ANDN</span>
+				<!--end::Description-->
+			</div>
+			<!--end::Info-->
+		</div>
+		<!--end::User avatar-->
+		<!--begin::Action-->
+		<a href="/signin" class="btn btn-icon btn-active-color-primary btn-icon-custom-color me-n4"
+			data-bs-toggle="tooltip" title="End session and singout">
+			{{ getIcon('entrance-left', 'fs-2 text-gray-400') }}
+		</a>
+		<!--end::Action-->
+	</div>
+	<!--end::User-->
+</div>
+<!--end::Sidebar-->

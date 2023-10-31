@@ -1,0 +1,198 @@
+<!--
+Define in dashboards/views.py file
+context.update({
+    'layout': KTTheme.setLayout('default.html', context),
+})
+-->
+{% extends layout %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<!--begin::Row-->
+<div class="row g-5 g-xl-10 mb-xl-10">
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "DDI" -%}
+            {% set slo_percent = 73 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Cloud Connectivity" -%}
+            {% set slo_percent = 56 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "VPN" -%}
+            {% set slo_percent = 89 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "WAN" -%}
+            {% set slo_percent = 41 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Zscaler" -%}
+            {% set slo_percent = 67 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "CVO" -%}
+            {% set slo_percent = 92 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "NTP" -%}
+            {% set slo_percent = 48 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Internet Perimeter" -%}
+            {% set slo_percent = 79 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Firewalls" -%}
+            {% set slo_percent = 44 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "DNS" -%}
+            {% set slo_percent = 62 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Load Balancers" -%}
+            {% set slo_percent = 85 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+            {% set parentservice = "Security Devices" -%}
+            {% set slo_percent = 53 -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+<!--begin::Row-->
+<div class="row g-5 g-xxl-10">
+    <!--begin::Col-->
+    <div class="col-xl-5 col-xxl-4 mb-xl-5 mb-xxl-10">
+        {% include 'partials/widgets/cards/_widget-4.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-7 col-xxl-8 mb-5 mb-xxl-10">
+        {% include 'partials/widgets/engage/_widget-2.html' %}
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+<!--begin::Row-->
+<div class="row g-5 g-xxl-10">
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xl-5 mb-xxl-10">
+        {% include 'partials/widgets/charts/_widget-9.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-8 mb-5 mb-xxl-10">
+        {% include 'partials/widgets/charts/_widget-1.html' %}
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+<!--begin::Row-->
+<div class="row g-5 g-xxl-10">
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xl-5 mb-xxl-10">
+        {% include 'partials/widgets/lists/_widget-3.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-8 mb-5 mb-xxl-10">
+        {% include 'partials/widgets/tables/_widget-3.html' %}
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+<!--begin::Row-->
+<div class="row g-5 g-xxl-10">
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xl-5 mb-xxl-10">
+        {% include 'partials/widgets/lists/_widget-13.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-8 mb-5 mb-xxl-10">
+        {% include 'partials/widgets/timeline/_widget-1.html' %}
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+<!--begin::Row-->
+<div class="row g-5 g-xxl-10">
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xxl-10">
+        {% include 'partials/widgets/charts/_widget-5.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xxl-10">
+        {% include 'partials/widgets/lists/_widget-14.html' %}
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-4 mb-xxl-10">
+        {% include 'partials/widgets/lists/_widget-15.html' %}
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+
+{% endblock content %}

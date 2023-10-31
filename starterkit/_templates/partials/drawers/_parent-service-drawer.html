@@ -1,0 +1,43 @@
+<div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-md-5 mb-xl-10"">
+	<!--begin::Col-->
+	<div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+		{% set service = service|string -%}
+		{% set slo_percent = slo_percent|int -%}
+		{% include 'partials/widgets/cards/_widget-slo.html' %}
+	</div>
+	<!--end::Col-->
+	
+	<!--begin::Col-->
+	<div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+		{% for child_service, slo_percent in child_services.items() %}
+		<div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+			<a href="#" data-bs-toggle="offcanvas" data-bs-target="#child-service-drawer" data-bs-child-service="{{ child_service }}" data-bs-slo-percent="{{ slo_percent }}">
+				{% set service = child_service|string -%}
+				{% set slo_percent = slo_percent|int -%}
+				{% include 'partials/widgets/cards/_widget-slo.html' %}
+			</a>
+		</div>
+	</div>
+	{% endfor %}
+	<!--end::Col-->
+
+	<!--begin::Offcanvas drawer-->
+	<div class="offcanvas offcanvas-end overlapping" tabindex="-1" id="child-service-drawer" aria-labelledby="child-service-drawer-label" data-bs-backdrop="false">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="child-service-drawer-label">Child Service Drawer</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			{% include 'partials/drawers/_child-service-drawer.html' %}
+		</div>
+	</div>
+	<!--end::Offcanvas drawer-->
+	<!--begin::Col-->
+	<div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+		<div class="widget-container">
+			{% include 'partials/widgets/lists/_widget-14.html' %}
+		</div>
+	</div>
+	<!--end::Col-->
+
+</div>

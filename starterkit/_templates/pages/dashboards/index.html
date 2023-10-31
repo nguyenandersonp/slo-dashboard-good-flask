@@ -1,0 +1,177 @@
+<!--
+Define in dashboards/views.py file
+context.update({
+    'layout': KTTheme.setLayout('default.html', context),
+})
+-->
+{% extends layout %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<!--begin::Row-->
+<div class="row g-5 g-xl-10 mb-xl-10">
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="DDI">
+            {% set service = "DDI" -%}
+            {% set slo_percent = 73 -%}
+            {% set child_services = {"Child Service 1": 60, "Child Service 2": 80, "Child Service 3": 90} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Cloud Connectivity">
+            {% set service = "Cloud Connectivity" -%}
+            {% set slo_percent = 56 -%}
+            {% set child_services = {"Child Service 1": 70, "Child Service 2": 80, "Child Service 3": 90} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="VPN">
+            {% set service = "VPN" -%}
+            {% set slo_percent = 89 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 70, "Child Service 3": 90} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="WAN">
+            {% set service = "WAN" -%}
+            {% set slo_percent = 41 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 60, "Child Service 3": 70} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Zscaler">
+            {% set service = "Zscaler" -%}
+            {% set slo_percent = 67 -%}
+            {% set child_services = {"Child Service 1": 80, "Child Service 2": 90, "Child Service 3": 100} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="CVO">
+            {% set service = "CVO" -%}
+            {% set slo_percent = 92 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 60, "Child Service 3": 70} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="NTP">
+            {% set service = "NTP" -%}
+            {% set slo_percent = 48 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 60, "Child Service 3": 70} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Internet Perimeter">
+            {% set service = "Internet Perimeter" -%}
+            {% set slo_percent = 79 -%}
+            {% set child_services = {"Child Service 1": 80, "Child Service 2": 90, "Child Service 3": 100} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Firewalls">
+            {% set service = "Firewalls" -%}
+            {% set slo_percent = 44 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 60, "Child Service 3": 70} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10">
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="DNS">
+            {% set service = "DNS" -%}
+            {% set slo_percent = 62 -%}
+            {% set child_services = {"Child Service 1": 80, "Child Service 2": 90, "Child Service 3": 100} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Load Balancers">
+            {% set service = "Load Balancers" -%}
+            {% set slo_percent = 85 -%}
+            {% set child_services = {"Child Service 1": 50, "Child Service 2": 60, "Child Service 3": 70} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10" data-bs-toggle="offcanvas" data-bs-target="#activity-drawer"
+            data-bs-parent="#widgets" data-service="Security Devices">
+            {% set service = "Security Devices" -%}
+            {% set slo_percent = 53 -%}
+            {% set child_services = {"Child Service 1": 80, "Child Service 2": 90, "Child Service 3": 100} -%}
+            {% include 'partials/widgets/cards/_widget-slo.html' %}
+        </div>
+        <!--end::Col-->
+    </div>
+    <!--end::Col-->
+</div>
+<!--end::Row-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="activity-drawer" aria-labelledby="activity-drawer-title">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="activity-drawer-title"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        {% set service = "Parent Service" -%}
+        {% set slo_percent = 53 -%}
+        {% set child_services = {"Child Service 1": 80, "Child Service 2": 90, "Child Service 3": 100} -%}
+        {% include 'partials/drawers/_parent-service-drawer.html' %}
+    </div>
+</div>
+
+<script>
+    var activityDrawer = new bootstrap.Offcanvas(document.getElementById('activity-drawer'), {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        scroll: true,
+        relatedTarget: null
+    });
+
+    var activityDrawerTitle = document.getElementById('activity-drawer-title');
+    var activityDrawerBody = document.getElementById('activity-drawer-body');
+
+    var widgets = document.getElementById('widgets');
+    widgets.addEventListener('click', function (event) {
+        var target = event.target;
+        if (target.dataset.bsToggle === 'offcanvas') {
+            var service = target.dataset.service;
+            activityDrawerTitle.innerHTML = service;
+            activityDrawer.show();
+        }
+    });
+</script>
+
+{% endblock content %}

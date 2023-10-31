@@ -1,0 +1,9 @@
+<div class="col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-md-5 mb-xl-10 ">
+	<!--begin::Col-->
+	<div class="col-xl-12 col-xxl-12 mb-xl-5 mb-xxl-10">
+		{% set service = service|string -%}
+		{% set slo_percent = slo_percent|int -%}
+		{% include 'partials/widgets/cards/_widget-slo.html' %}
+	</div>
+	<!--end::Col-->
+</div>
