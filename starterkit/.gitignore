@@ -135,8 +135,6 @@ GitHub.sublime-settings
 .history
 
 assets
-!assets/media/avatars/andn.png
-!assets/media/logos/cg-logo-network-technologies-dark-mode.png
 node_modules
 yarn.lock
 
