@@ -134,7 +134,6 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 
-assets
 node_modules
 yarn.lock
 
